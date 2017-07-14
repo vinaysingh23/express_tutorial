@@ -4,11 +4,11 @@ $(document).ready(function () {
 
 function deleteUser(){
 	var confirmation = confirm('Are You Sure?');
-	alert(1);
-		if(confirmation){
+	//alert(1);
+	if(confirmation){
 		$.ajax({
 			type: 'DELETE',
-			url: '/users/delete/'+$('.deleteUser').data('id');
+			url: '/users/delete/'+$(this).data('id')
 
 		}).done(function(response){
 			window.location.replace('/');
